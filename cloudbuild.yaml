@@ -1,13 +1,5 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args:
-  - 'run'
-  - 'deploy'
-  - 'helloworld'
-  - '--source'
-  - '.'
-  - '--platform'
-  - 'managed'
-  - '--allow-unauthenticated'
-  - '--region'
-  - 'us-central1'
+- name: 'gcr.io/cloudbuild/docker'
+  args: ['build', '-t', 'my-image', '.']
+logging: CLOUD_LOGGING_ONLY
+serviceAccount: '524918356832-compute@developer.gserviceaccount.com'
