@@ -50,7 +50,7 @@ func main() {
 		port = "8080"
 	}
 
-	log.Print("Hello from Cloud Run! The container started successfully and is listening for HTTP requests on $PORT")
+	log.Print("Hi from Cloud Run! The container started successfully and is listening for HTTP requests on $PORT")
 	log.Printf("Listening on port %s", port)
 	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
