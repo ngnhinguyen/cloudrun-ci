@@ -1,5 +1,6 @@
 steps:
 - name: 'gcr.io/cloudbuild/docker'
   args: ['build', '-t', 'my-image', '.']
-logging: CLOUD_LOGGING_ONLY
+options:
+  logging: CLOUD_LOGGING_ONLY
 serviceAccount: '524918356832-compute@developer.gserviceaccount.com'
